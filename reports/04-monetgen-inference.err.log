@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/shravan/anaconda3/envs/hf/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Load the trained model
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+G_XtoY = Generator(in_channels=3, out_channels=3).to(device)
+G_XtoY.load_state_dict(torch.load('/kaggle/input/monetgen/pytorch/monetgen_v1/1/G_XtoY.pth'))
+G_XtoY.eval()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[2], line 4[0m
+[1;32m      2[0m device [38;5;241m=[39m torch[38;5;241m.[39mdevice([38;5;124m'[39m[38;5;124mcuda[39m[38;5;124m'[39m [38;5;28;01mif[39;00m torch[38;5;241m.[39mcuda[38;5;241m.[39mis_available() [38;5;28;01melse[39;00m [38;5;124m'[39m[38;5;124mcpu[39m[38;5;124m'[39m)
+[1;32m      3[0m G_XtoY [38;5;241m=[39m Generator(in_channels[38;5;241m=[39m[38;5;241m3[39m, out_channels[38;5;241m=[39m[38;5;241m3[39m)[38;5;241m.[39mto(device)
+[0;32m----> 4[0m G_XtoY[38;5;241m.[39mload_state_dict(torch[38;5;241m.[39mload([38;5;124m'[39m[38;5;124m/kaggle/input/monetgen/pytorch/monetgen_v1/1/G_XtoY.pth[39m[38;5;124m'[39m))
+[1;32m      5[0m G_XtoY[38;5;241m.[39meval()
+
+File [0;32m~/anaconda3/envs/hf/lib/python3.11/site-packages/torch/serialization.py:791[0m, in [0;36mload[0;34m(f, map_location, pickle_module, weights_only, **pickle_load_args)[0m
+[1;32m    788[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mencoding[39m[38;5;124m'[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m pickle_load_args[38;5;241m.[39mkeys():
+[1;32m    789[0m     pickle_load_args[[38;5;124m'[39m[38;5;124mencoding[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;124m'[39m[38;5;124mutf-8[39m[38;5;124m'[39m
+[0;32m--> 791[0m [38;5;28;01mwith[39;00m _open_file_like(f, [38;5;124m'[39m[38;5;124mrb[39m[38;5;124m'[39m) [38;5;28;01mas[39;00m opened_file:
+[1;32m    792[0m     [38;5;28;01mif[39;00m _is_zipfile(opened_file):
+[1;32m    793[0m         [38;5;66;03m# The zipfile reader is going to advance the current file position.[39;00m
+[1;32m    794[0m         [38;5;66;03m# If we want to actually tail call to torch.jit.load, we need to[39;00m
+[1;32m    795[0m         [38;5;66;03m# reset back to the original position.[39;00m
+[1;32m    796[0m         orig_position [38;5;241m=[39m opened_file[38;5;241m.[39mtell()
+
+File [0;32m~/anaconda3/envs/hf/lib/python3.11/site-packages/torch/serialization.py:271[0m, in [0;36m_open_file_like[0;34m(name_or_buffer, mode)[0m
+[1;32m    269[0m [38;5;28;01mdef[39;00m [38;5;21m_open_file_like[39m(name_or_buffer, mode):
+[1;32m    270[0m     [38;5;28;01mif[39;00m _is_path(name_or_buffer):
+[0;32m--> 271[0m         [38;5;28;01mreturn[39;00m _open_file(name_or_buffer, mode)
+[1;32m    272[0m     [38;5;28;01melse[39;00m:
+[1;32m    273[0m         [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mw[39m[38;5;124m'[39m [38;5;129;01min[39;00m mode:
+
+File [0;32m~/anaconda3/envs/hf/lib/python3.11/site-packages/torch/serialization.py:252[0m, in [0;36m_open_file.__init__[0;34m(self, name, mode)[0m
+[1;32m    251[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m([38;5;28mself[39m, name, mode):
+[0;32m--> 252[0m     [38;5;28msuper[39m()[38;5;241m.[39m[38;5;21m__init__[39m([38;5;28mopen[39m(name, mode))
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/kaggle/input/monetgen/pytorch/monetgen_v1/1/G_XtoY.pth'
+

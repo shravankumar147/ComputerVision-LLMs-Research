@@ -87,10 +87,10 @@ class MultiHeadAttention(nn.Module):
     def __init__(self, num_heads, head_size):
         super().__init__()
         self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
-        self.proj = nn.Linear(n_embd, n_embd)
+        self.proj = nn.Linear(n_embd, n_embd) 
     def forward(self, x):
-        out = torch.cat([h(x) for h in self.heads], dim=-1)
-        out = self.proj(out)
+        out = torch.cat([h(x) for h in self.heads], dim=-1) # (B,T,C)
+        out = self.proj(out) # (B,T,C)
         return out
 
 class FeedFoward(nn.Module):
@@ -105,7 +105,7 @@ class FeedFoward(nn.Module):
         )
 
     def forward(self, x):
-        return self.net(x)
+        return self.net(x) # (B,T,C)
 
 class Block(nn.Module):
     """ Transformer block: communication followed by computation """
@@ -116,10 +116,12 @@ class Block(nn.Module):
         head_size = n_embd // n_head
         self.sa = MultiHeadAttention(n_head, head_size)
         self.ffwd = FeedFoward(n_embd)
+        self.ln1 = nn.LayerNorm(n_embd)
+        self.ln2 = nn.LayerNorm(n_embd)        
 
     def forward(self, x):
-        x = x + self.sa(x)
-        x = x + self.ffwd(x)
+        x = x + self.sa(self.ln1(x)) # (B,T,C)
+        x = x + self.ffwd(self.ln2(x)) # (B,T,C)
         return x
 
 # super simple bigram model
@@ -134,6 +136,7 @@ class BigramLanguageModel(nn.Module):
             Block(n_embd, n_head=4),
             Block(n_embd, n_head=4),
             Block(n_embd, n_head=4),
+            nn.LayerNorm(n_embd),
         )
         self.lm_head = nn.Linear(n_embd, vocab_size)
 

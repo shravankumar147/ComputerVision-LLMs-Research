@@ -17,10 +17,6 @@ n_head = 6
 n_layer = 6
 dropout = 0.2
 
-if device == 'cuda':
-    pass
-else:
-    sys.exit(0)
 # ------------
 
 torch.manual_seed(1337)

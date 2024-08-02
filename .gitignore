@@ -12,6 +12,8 @@ __pycache__/
 *.png
 *.jpg
 *.jpeg
+docvqa_dataset/
+poker-cards-4/
 
 # Distribution / packaging
 .Python

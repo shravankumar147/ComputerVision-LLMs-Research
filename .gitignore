@@ -175,3 +175,5 @@ cython_debug/
 #.idea/
 finetuning/roam2/notebooks/finetuned_dinov2_model/model.safetensors
 finetuning/roam2/data/PartialRelease.tar
+finetuning/roam2/notebooks/finetuned_dinov2_model/model.safetensors
+finetuning/roam2/data/PartialRelease.tar

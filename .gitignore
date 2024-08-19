@@ -178,3 +178,5 @@ finetuning/roam2/data/PartialRelease.tar
 finetuning/roam2/notebooks/finetuned_dinov2_model/model.safetensors
 finetuning/roam2/data/PartialRelease.tar
 hf/Florence-2/florence2-lora/adapter_model.safetensors
+finetuning/Downstream-Dinov2/weights/segmentation_model.pt
+finetuning/Downstream-Dinov2/weights/classification_model.pt

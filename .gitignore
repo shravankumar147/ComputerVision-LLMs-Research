@@ -17,6 +17,8 @@ poker-cards-4/
 *.safetensors
 *.pt
 *.ckpt
+*.zip
+*.tar
 # Distribution / packaging
 .Python
 build/
@@ -171,3 +173,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+finetuning/roam2/notebooks/finetuned_dinov2_model/model.safetensors
+finetuning/roam2/data/PartialRelease.tar

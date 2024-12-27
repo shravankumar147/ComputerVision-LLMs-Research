@@ -8,7 +8,7 @@ Welcome to the **Resume AI** project, where we explore the intersection of **Com
 
 | File Name                                        | Description                                                       | Link              |
 |-------------------------------------------------|-------------------------------------------------------------------|-------------------|
-| [01-resume-ranking.ipynb](01-resume-ranking.ipynb) | Notebook for implementing resume ranking models.                  | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue)![link](https://www.kaggle.com/code/shravankumar147/01-resume-ranking?scriptVersionId=214394202) |
+| [01-resume-ranking.ipynb](01-resume-ranking.ipynb) | Notebook for implementing resume ranking models.                  | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) [link](https://www.kaggle.com/code/shravankumar147/01-resume-ranking?scriptVersionId=214394202) |
 | [03-hf-chain-parser.ipynb](03-hf-chain-parser.ipynb) | Demonstrates parsing resumes with Hugging Face and LangChain.     | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
 | [hugging-face-models-with-langchain-for-resume-data.ipynb](hugging-face-models-with-langchain-for-resume-data.ipynb) | Combines Hugging Face models with LangChain for resume data tasks. | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
 

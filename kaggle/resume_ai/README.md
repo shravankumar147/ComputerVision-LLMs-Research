@@ -4,13 +4,14 @@ Welcome to the **Resume AI** project, where we explore the intersection of **Com
 
 ## Repository Structure
 
+
 ### Kaggle Notebooks
 
-| File Name                                        | Description                                                       | Link              |
-|-------------------------------------------------|-------------------------------------------------------------------|-------------------|
-| [01-resume-ranking.ipynb](01-resume-ranking.ipynb) | Notebook for implementing resume ranking models.                  | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) [link](https://www.kaggle.com/code/shravankumar147/01-resume-ranking?scriptVersionId=214394202) |
-| [03-hf-chain-parser.ipynb](03-hf-chain-parser.ipynb) | Demonstrates parsing resumes with Hugging Face and LangChain.     | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
-| [hugging-face-models-with-langchain-for-resume-data.ipynb](hugging-face-models-with-langchain-for-resume-data.ipynb) | Combines Hugging Face models with LangChain for resume data tasks. | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
+| **Notebook**                                 | **Open in Kaggle**                                                                                 | **Repository**                                                                                       |
+|:-------------------------------------------:|:-------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------:|
+| [01-resume-ranking.ipynb](01-resume-ranking.ipynb)                  | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/your-link-to-notebook) | [![GitHub](https://badges.aleen42.com/src/github.svg)](https://github.com/shravankumar147/ComputerVision-LLMs-Research/blob/master/kaggle/resume_ai/01-resume-ranking.ipynb) |
+| [03-hf-chain-parser.ipynb](03-hf-chain-parser.ipynb)                | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/your-link-to-notebook) | [![GitHub](https://badges.aleen42.com/src/github.svg)](https://github.com/shravankumar147/ComputerVision-LLMs-Research/blob/master/kaggle/resume_ai/03-hf-chain-parser.ipynb) |
+| [hugging-face-models-with-langchain-for-resume-data.ipynb](hugging-face-models-with-langchain-for-resume-data.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/your-link-to-notebook) | [![GitHub](https://badges.aleen42.com/src/github.svg)](https://github.com/shravankumar147/ComputerVision-LLMs-Research/blob/master/kaggle/resume_ai/hugging-face-models-with-langchain-for-resume-data.ipynb) |
 
 ## Key Features
 

@@ -6,11 +6,11 @@ Welcome to the **Resume AI** project, where we explore the intersection of **Com
 
 ### Kaggle Notebooks
 
-| File Name                                        | Description                                                       | Last Commit Message                     | Last Commit Date |
-|-------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------|------------------|
-| [01-resume-ranking.ipynb](01-resume-ranking.ipynb) | Notebook for implementing resume ranking models.                  | Kaggle Notebook | 01.Resume Ranking | Version 1 | 4 days ago |
-| [03-hf-chain-parser.ipynb](03-hf-chain-parser.ipynb) | Demonstrates parsing resumes with Hugging Face and LangChain.     | Kaggle Notebook | 03.HF_Chain_Parser | Version 1 | 10 minutes ago |
-| [hugging-face-models-with-langchain-for-resume-data.ipynb](hugging-face-models-with-langchain-for-resume-data.ipynb) | Combines Hugging Face models with LangChain for resume data tasks. | Kaggle Notebook | Hugging Face Models with LangChain for Resume Data | 4 days ago |
+| File Name                                        | Description                                                       | Link              |
+|-------------------------------------------------|-------------------------------------------------------------------|-------------------|
+| [01-resume-ranking.ipynb](https://www.kaggle.com/your-link-to-notebook) | Notebook for implementing resume ranking models.                  | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
+| [03-hf-chain-parser.ipynb](https://www.kaggle.com/your-link-to-notebook) | Demonstrates parsing resumes with Hugging Face and LangChain.     | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
+| [hugging-face-models-with-langchain-for-resume-data.ipynb](https://www.kaggle.com/your-link-to-notebook) | Combines Hugging Face models with LangChain for resume data tasks. | ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue) |
 
 ## Key Features
 
